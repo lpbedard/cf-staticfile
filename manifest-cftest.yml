@@ -1,0 +1,9 @@
+applications:
+- name: jenkins-test-staticfile
+  buildpack: staticfile_buildpack
+  memory: 256M
+  host: jenkins-test-staticfile
+  domain: cftest.hybris.com
+  instances: 1
+  url: jenkins-test-staticfile.cftest.hybris.com
+  path: .

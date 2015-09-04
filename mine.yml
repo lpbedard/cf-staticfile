@@ -1,0 +1,9 @@
+applications:
+- name: jenkins-test-staticfile-lp
+  buildpack: staticfile_buildpack
+  memory: 512G
+  host: jenkins-test-staticfile-lp
+  domain: cf4.hybris.com
+  instances: 1
+  url: jenkins-test-staticfile-lp.cf4.hybris.com
+  path: .

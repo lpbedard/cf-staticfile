@@ -1,0 +1,97 @@
+<html>
+<head>
+
+<style type="text/css">
+body {
+    padding: 30px;
+}
+
+h1 {
+    margin: 0 0 30px;
+    font-size: 32px;
+    font-weight: normal;
+
+    span {
+        color: #999;
+        font-size: 16px;
+    }
+}
+
+.terms__figure {
+    line-height: 1.6;
+}
+
+.terms__item {
+    cursor: help;
+
+    &.is-active {
+        transform: scale(1.1);
+        border-bottom: 1px solid #000;
+    }
+}
+
+.terms__figure {
+    margin-bottom: 30px;
+}
+
+.selector {
+    color: #e52a11;
+}
+
+.property {
+    color: #5dc80f;
+}
+
+.value {
+    color: #960fc8;
+}
+
+.pseudo-selector {
+    color: #115ce5;
+}
+
+.pseudo-element {
+    color: #e59811;
+}
+
+</style>
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  $(document).ready(function() {
+      var term;
+      $('.terms__item').on('mouseenter', function() {
+          term = $(this).data('term');
+          $(term).addClass('is-active');
+      }).on('mouseleave', function() {
+          $(term).removeClass('is-active');
+      });
+  });
+});
+</script>
+
+</head>
+<body>
+
+<h1>Hello World using staticfile-buildpacks</h1>
+
+<div class="terms">
+    <div class="terms__figure">
+        <code><span data-term=".selector" class="terms__item selector">.article-link</span><span data-term=".pseudo-selector" class="terms__item pseudo-selector">:hover</span><span data-term=".pseudo-element" class="terms__item pseudo-element">::after</span></span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span data-term=".property" class="terms__item property">content</span>: <span data-term=".value" class="terms__item value">'->'</span>;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span data-term=".property" class="terms__item property">color</span>: <span data-term=".value" class="terms__item value">#1193e5</span>;<br>
+        }</code>
+    </div>
+
+    <div class="terms__legend">
+        <span data-term=".selector" class="terms__item selector">Selector</span>,
+        <span data-term=".pseudo-selector" class="terms__item pseudo-selector">Pseudo Class Selector</span>,
+        <span data-term=".pseudo-element" class="terms__item pseudo-element">Pseudo Element</span>,
+        <span data-term=".property" class="terms__item property">Property</span>,
+        <span data-term=".value" class="terms__item value">Value</span>
+    </div>
+</div>
+
+</body>
+</html>

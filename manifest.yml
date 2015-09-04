@@ -1,0 +1,6 @@
+applications:
+- name: jenkins-test-staticfile
+  buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git#16b2bb2c6170e2e066cdfc89a96dc8ea7609c098
+  memory: 256M
+  instances: 1
+  path: .
